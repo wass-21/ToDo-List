@@ -1,0 +1,22 @@
+<div class="body">
+
+  <div class="design">
+    <img src="assets\design.png" alt="Picture">
+  </div>
+
+  <div class="signin-form">
+    <form>
+      <h1>Time to Work!</h1>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      <div *ngIf="emailErrorMessage" class="errorMessage">{{emailErrorMessage}}</div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      <div *ngIf="passwordErrorMessage" class="errorMessage">{{passwordErrorMessage}}</div>
+
+      <div *ngIf="errorMessage" class="errorMessage">{{errorMessage}}</div>
+      <button type="submit" (click)="signin()"><strong>SIGN IN</strong></button>
+    </form>
+  </div>
+</div>
